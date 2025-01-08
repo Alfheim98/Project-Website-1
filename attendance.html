@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Attendance</title>
+  <link rel="stylesheet" href="css/attendance.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+<body>
+  <aside class="sidebar">
+   
+    <header class="sidebar-header">
+      <a class="header-logo">
+        <img title="BS Computer Engineering" src="/image/icpep.png">
+      </a>
+      <button class="toggler sidebar-toggler">
+        <span class="material-symbols-rounded">chevron_left</span>
+      </button>
+      <button class="toggler menu-toggler">
+        <span class="material-symbols-rounded">menu</span>
+      </button>
+    </header>
+
+    <nav class="sidebar-nav">
+      
+      <ul class="nav-list primary-nav">
+        <li class="nav-item">
+          <a href="/dashboard" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">dashboard</span>
+            <span class="nav-label">Dashboard</span>
+          </a>
+          <span class="nav-tooltip">Dashboard</span>
+        </li>
+        <li class="nav-item">
+          <a href="/createclass" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">calendar_today</span>
+            <span class="nav-label">Create Class</span>
+          </a>
+          <span class="nav-tooltip">Create Class</span>
+        </li>
+        <li class="nav-item">
+          <a href="/manageclass" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">star</span>
+            <span class="nav-label">Manage Class</span>
+          </a>
+          <span class="nav-tooltip">Manage Class</span>
+        </li>
+        <li class="nav-item">
+          <a href="/addstudent" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">group</span>
+            <span class="nav-label">Add Student</span>
+          </a>
+          <span class="nav-tooltip">Add Student</span>
+        </li>
+        <li class="nav-item">
+          <a href="/studentlist" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">person</span>
+            <span class="nav-label">Student Listed</span>
+          </a>
+          <span class="nav-tooltip">Student Listed</span>
+        </li>
+        <li class="nav-item">
+          <a href="/attendance" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">insert_chart</span>
+            <span class="nav-label">Attendance</span>
+          </a>
+          <span class="nav-tooltip">Attendance</span>
+        </li>
+        <li class="nav-item">
+          <a href="/recorded" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">archive</span>
+            <span class="nav-label">Archive</span>
+          </a>
+          <span class="nav-tooltip">Archive</span>
+        </li>
+      </ul>
+
+      <ul class="nav-list secondary-nav">
+        <li class="nav-item">
+          <a href="/" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">logout</span>
+            <span class="nav-label">Logout</span>
+          </a>
+          <span class="nav-tooltip">Logout</span>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+
+  <div class="main-content">
+    
+    <div class="box-animation">
+      <div class="wrapper">
+        <div class="static-txt">I focus on</div>
+        <ul class="dynamic-txts">
+          <li><span>Attendance Checker</span></li>
+          <li><span>Attendance</span></li>
+          <li><span>Attendance Checker</span></li>
+          <li><span>Attendance</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <h3>Create Daily Attendance</h3>
+      <form id="attendance-form">
+          <div class="form-group">
+              <input class="forms" id="date" placeholder="Enter Date" maxlength="2" oninput="validateInput(this, 1, 31)" required>
+              <input class="forms" id="month" placeholder="Enter month" maxlength="2" oninput="validateInput(this, 1, 12)" required>
+              <input class="forms" id="year" placeholder="Enter Year" maxlength="4" oninput="validateYearInput(this)" required>
+
+              <select id="subject">
+                  <option value="" disabled selected> Select Subject </option>
+              </select>
+
+              <button type="button" id="confirm-button" class="btn-confirm">Confirm</button>
+
+          </div>
+      </form>
+
+      <div id="attendance-display" class="attendance-box hidden">
+          <h3 id="subject-title">Subject</h3>
+          <p id="attendance-info">attendance for this Subject</p>
+          <p id="attendance-date">Date</p>
+      </div>
+
+      <table class="class-info-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Student No.</th>
+                <th>Student Name</th>
+                <th>Section</th>
+                <th>Mark</th>
+            </tr>
+        </thead>
+        <tbody>
+          <!-- Data will be dynamically inserted here -->
+      </tbody>
+    </table>
+    <button type="submit" id="save-button" class="btn-save hidden">Save</button>
+  </div>
+  </div>
+
+
+        <script src="js/attendance.js"></script>
+    </body>
+</html>

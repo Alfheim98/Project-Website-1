@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <title>Attendance Checker</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="loginBox" class="form-box">
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <h2>Login Now</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter Username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Password">
+            </div>
+            <button class="btn" onclick="login()">Log In</button>
+            <h3><a href="#" onclick="showRegister()">Register</a></h3>
+        </div>
+
+        <div id="registerBox" class="form-box hidden">
+            <h2>Register</h2>
+            <div class="input-group">
+                <label for="newUsername">Create Username</label>
+                <input type="text" id="newUsername" placeholder="Enter Username">
+            </div>
+            <div class="input-group">
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" placeholder="Enter Password">
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            </div>
+            <button class="btn" onclick="register()">Confirm</button>
+            <h3><a href="#" onclick="showLogin()">Back to Login</a></h3>
+        </div>
+
+
+        <div class="info-box">
+            <img src="/image/icpep.png" alt="Logo" class="logo">
+            <h1>Attendance Checker</h1>
+            <p>Attendance Checker is an efficient and user-friendly platform designed to streamline the student attendance process. By utilizing this website, students can easily sign in for attendance in a faster, more convenient way, reducing the time and effort traditionally spent on attendance managing. Whether used for classrooms, seminars, or other educational settings, Attendance Checker ensures accuracy and simplicity, allowing students to focus on what matters most: learning.</p>
+        </div>
+    </div>
+
+    <script src="/js/login.js"></script>
+</body>
+</html>

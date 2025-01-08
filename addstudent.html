@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Attendance</title>
+  <link rel="stylesheet" href="css/addstudent.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+<body>
+  <aside class="sidebar">
+   
+    <header class="sidebar-header">
+      <a class="header-logo">
+        <img title="BS Computer Engineering" src="/image/icpep.png">
+      </a>
+      <button class="toggler sidebar-toggler">
+        <span class="material-symbols-rounded">chevron_left</span>
+      </button>
+      <button class="toggler menu-toggler">
+        <span class="material-symbols-rounded">menu</span>
+      </button>
+    </header>
+    
+    <nav class="sidebar-nav">
+
+      <ul class="nav-list primary-nav">
+        <li class="nav-item">
+          <a href="/dashboard" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">dashboard</span>
+            <span class="nav-label">Dashboard</span>
+          </a>
+          <span class="nav-tooltip">Dashboard</span>
+        </li>
+        <li class="nav-item">
+          <a href="/createclass" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">calendar_today</span>
+            <span class="nav-label">Create Class</span>
+          </a>
+          <span class="nav-tooltip">Create Class</span>
+        </li>
+        <li class="nav-item">
+          <a href="/manageclass" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">star</span>
+            <span class="nav-label">Manage Class</span>
+          </a>
+          <span class="nav-tooltip">Manage Class</span>
+        </li>
+        <li class="nav-item">
+          <a href="/addstudent" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">group</span>
+            <span class="nav-label">Add Student</span>
+          </a>
+          <span class="nav-tooltip">Add Student</span>
+        </li>
+        <li class="nav-item">
+          <a href="/studentlist" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">person</span>
+            <span class="nav-label">Student Listed</span>
+          </a>
+          <span class="nav-tooltip">Student Listed</span>
+        </li>
+        <li class="nav-item">
+          <a href="/attendance" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">insert_chart</span>
+            <span class="nav-label">Attendance</span>
+          </a>
+          <span class="nav-tooltip">Attendance</span>
+        </li>
+        <li class="nav-item">
+          <a href="/recorded" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">archive</span>
+            <span class="nav-label">Archive</span>
+          </a>
+          <span class="nav-tooltip">Archive</span>
+        </li>
+      </ul>
+
+      <ul class="nav-list secondary-nav">
+        <li class="nav-item">
+          <a href="/" class="nav-link">
+            <span class="nav-icon material-symbols-rounded">logout</span>
+            <span class="nav-label">Logout</span>
+          </a>
+          <span class="nav-tooltip">Logout</span>
+        </li>
+      </ul>
+
+    </nav>
+  </aside>
+
+
+  <div class="main-content">
+    
+    <div class="box-animation">
+      <div class="wrapper">
+        <div class="static-txt">I focus on</div>
+        <ul class="dynamic-txts">
+          <li><span>Attendance Checker</span></li>
+          <li><span>Add Student</span></li>
+          <li><span>Attendance Checker</span></li>
+          <li><span>Add Student</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-container">
+        <h3>Fill the Class info</h3>
+        <form id="add-student-form">
+            <div class="form-group">
+              <label for="student-number">Student Number</label>
+              <input type="text" id="student-number" placeholder="Enter Student No." required>
+            </div>
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="Enter First Name" required>
+            </div>
+            <div class="form-group">
+              <label for="middle-initial">Middle Initial</label>
+                <input type="text" id="middle-initial" placeholder="Enter Middle Initial" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Enter Last Name" required>
+            </div>
+            <div class="form-group">
+                <label for="class">Class</label>
+                <select id="class" required>
+                    <option value="">Select Class</option>
+                </select>
+
+                <button type="submit" class="btn-add">Add</button>
+            </div>
+        </form>
+        <div id="status-message"></div>
+    </div>
+</div>
+
+
+        <script src="js/addstudent.js"></script>
+    </body>
+</html>

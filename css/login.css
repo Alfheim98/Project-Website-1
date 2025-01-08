@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #F9FCF0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: "Source Sans 3", sans-serif;
+    }
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 900px;
+        margin: 20px;
+        border-radius: 10px;
+        background-color: #F9FCF0;
+    }
+    
+    .form-box {
+        flex: 1 1 300px;
+        padding: 40px;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0.1, 0.1, 0.2);
+        border-radius: 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .form-box.hidden {
+        display: none;
+    }
+    
+    h1 {
+        font-family: "Sonsie One", system-ui;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        color: #3B3030;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    h3 a {
+        color: #3B3030;
+    }
+
+    h3 a:hover {
+        color: #e06642;
+    }
+    
+    .input-group {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    
+    .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #3B3030;
+    }
+    
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .btn {
+        background-color: #e06642;
+        color: #3B3030;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 300px;
+    }
+    
+    .btn:hover {
+        background-color: #cc5232;
+    }
+    
+    p {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    p a {
+        text-decoration: none;
+        color: #e06642;
+    }
+
+    .sizings {
+        color: #ddd;
+    }
+    
+    p a:hover {
+        text-decoration: underline;
+    }
+    
+    .info-box {
+        padding: 40px;
+        background-color: #F9FCF0;
+        width: 400px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        display: block;
+        margin: 0 auto 20px;
+    
+    }
+
+    .icons {
+        color: #d57147;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons i {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+    
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-box, .info-box {
+            width: 90%;
+            margin: 10px 0;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .form-box {
+            padding: 20px;
+        }
+
+        .btn {
+            padding: 8px;
+        }
+
+        .input-group label {
+            font-size: 12px;
+        }
+
+        .input-group input {
+            padding: 8px;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
